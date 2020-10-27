@@ -1,0 +1,7 @@
+Inputs: buyLen(40),sellLen(40),longLiqLen(20),sellliqLen(20);
+
+Buy next bar at highest(h[1],buyLen) stop;
+Sellshort next bar at lowest(l[1],sellLen) stop;
+
+If Marketposition = 1 then sell next bar at lowest(low[1],longLiqLen) stop;
+If Marketposition = -1 then buytocover next bar at highest(high[1],sellLiqLen) stop;
